@@ -20,11 +20,15 @@ export default function Header({ setJoinActive, setShopActive }) {
   return (
     <>
       <header>
-        <img
-          className="logo"
-          src={logo}
-          alt="The Muslim Gamer League Logo"
-        ></img>
+        <Link to="/">
+          <img
+            onClick={() => handleActiveTab(home_li)}
+            className="logo"
+            src={logo}
+            alt="The Muslim Gamer League Logo"
+          ></img>
+        </Link>
+
         <nav>
           <ul>
             <li
