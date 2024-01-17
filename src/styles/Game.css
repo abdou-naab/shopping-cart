@@ -33,14 +33,15 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
+  justify-items: center;
 }
 @media (max-width: 520px) {
   #game-more .game-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     grid-template-rows: 2fr 3fr;
   }
   #game-more .carousel-root {
-    max-width: 60%;
+    max-width: 90%;
     padding-right: 0;
   }
   #game-more header span:nth-child(2) {
@@ -97,6 +98,7 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 3rem;
+  padding-left: 8px;
 }
 #game-more .game-info aside .more span:first-child {
   font-weight: bold;
