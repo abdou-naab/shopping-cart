@@ -1,0 +1,17 @@
+#root {
+  margin: 0 min(40px, 12vw);
+  position: relative;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+main {
+  z-index: 2;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  #root {
+    margin: 0 min(10px, 12vw);
+  }
+}

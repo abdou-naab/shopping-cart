@@ -1,0 +1,41 @@
+#join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 200px;
+  gap: 20px;
+}
+
+.join_bg {
+  background-image: linear-gradient(-31deg, var(--black), transparent),
+    url("../assets/mgl_bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.join_bg h1 {
+  font-size: 2rem;
+}
+
+#join h1 {
+  color: var(--main);
+}
+
+#join button {
+  font-size: 1.4rem;
+  padding: 0.5em 1.2em;
+  color: var(--black);
+  background-color: var(--main);
+  font-family: "Orbitron", system-ui, Roboto, Oxygen, Ubuntu, sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+#join button a {
+  text-decoration: none;
+  color: unset;
+}
+#join button:active {
+  transform: translate(4px, 4px);
+}

@@ -1,0 +1,36 @@
+#root > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+#root > header .logo {
+  width: clamp(2.4rem, 7.3vw, 7rem);
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#root > header ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  gap: clamp(10px, 4.5vw, 2rem);
+  font-size: clamp(8px, 3.1vw, 1.4rem);
+  font-weight: 600;
+  color: var(--grey);
+}
+#root > header ul li {
+  cursor: pointer;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+}
+#root > header ul li.active {
+  background-color: var(--main);
+  color: var(--black);
+}
+#root > header a {
+  text-decoration: none;
+  color: unset;
+}

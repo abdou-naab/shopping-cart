@@ -1,0 +1,120 @@
+#game-more {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+}
+
+#game-more header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--grey);
+  align-items: center;
+}
+#game-more header button {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+#game-more header button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--grey);
+  font-size: 18px;
+}
+#game-more header span:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+#game-more .game-info {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+}
+@media (max-width: 520px) {
+  #game-more .game-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+  }
+  #game-more .carousel-root {
+    max-width: 60%;
+    padding-right: 0;
+  }
+  #game-more header span:nth-child(2) {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+}
+.game-info .carousel-root {
+  max-width: 61vw;
+  padding-right: 1rem;
+}
+#game-more .carousel-root .thumbs.animated .thumb img {
+  aspect-ratio: 1.7/1;
+}
+#game-more .carousel-root .slide img {
+  width: 100%;
+  aspect-ratio: 1.7/1;
+}
+#game-more .game-info aside {
+  color: var(--grey);
+}
+#game-more .game-info aside .description {
+  max-height: 230px;
+  overflow: auto;
+  background: linear-gradient(45deg, transparent, var(--less_black));
+  border-radius: 12px;
+  clip-path: inset(0px 0px -30px);
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 8px;
+}
+#game-more .game-info aside .description::after {
+  content: "";
+  position: absolute;
+  display: block;
+  position: sticky;
+  bottom: 0;
+  height: 45px;
+  width: 110%;
+  pointer-events: none;
+  background-image: linear-gradient(transparent, rgb(30, 30, 38));
+  transform: translateY(8px);
+}
+#game-more .game-info aside .description::-webkit-scrollbar {
+  display: none;
+}
+#game-more .game-info aside .description {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#game-more .game-info aside .more {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+#game-more .game-info aside .more span:first-child {
+  font-weight: bold;
+  padding: 2px;
+  background-color: var(--less_black);
+  border-radius: 12px;
+}
+#game-more .game-info aside .buying {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+#game-more .game-info aside .buying button {
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: var(--grey);
+  padding: 0.3em 0.6em;
+  background-color: transparent;
+  cursor: pointer;
+}
