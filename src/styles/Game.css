@@ -37,7 +37,7 @@
 }
 @media (max-width: 520px) {
   #game-more .game-info {
-    grid-template-columns: 100vw;
+    grid-template-columns: 95vw;
     grid-template-rows: 2fr 3fr;
   }
   #game-more .carousel-root {
