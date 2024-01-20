@@ -42,7 +42,7 @@ export default function Header({ setJoinActive, setShopActive }) {
               <Link to="shop">Shop</Link>
             </li>
             <li onClick={() => handleActiveTab(join_li)} ref={join_li}>
-              <Link to="join">Join Now</Link>
+              <Link to="join">Join</Link>
             </li>
           </ul>
         </nav>

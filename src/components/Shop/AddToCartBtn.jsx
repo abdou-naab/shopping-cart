@@ -9,7 +9,7 @@ export default function AtcButton({
   setGamesInCart,
   currentGame,
 }) {
-  const { notif, setNotif } = useContext(Notif);
+  const { setNotif } = useContext(Notif);
 
   return (
     <>
@@ -29,13 +29,13 @@ export default function AtcButton({
                 },
               ]);
             setAddedToCart(true);
-            setNotif(notif + 1);
+            setNotif((n) => n + 1);
           } else {
             setGamesInCart((gamesInCartPrev) =>
               gamesInCartPrev.filter((i) => i.name != currentGame.name)
             );
             setAddedToCart(false);
-            setNotif(notif - 1);
+            setNotif((n) => n - 1);
           }
         }}
       >
