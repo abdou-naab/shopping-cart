@@ -52,6 +52,7 @@ section#shop {
   color: var(--grey);
   cursor: pointer;
   position: relative;
+  font-family: "Orbitron";
 }
 #shop header a {
   text-decoration: none;
@@ -125,6 +126,7 @@ section#shop {
   background-color: var(--less_black);
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+  font-family: "Orbitron";
 }
 #shop #cards .card .price {
   display: flex;
@@ -132,6 +134,7 @@ section#shop {
   margin-bottom: 6px;
   align-items: center;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 #shop #cards .card .price button {
   background-color: transparent;

@@ -1,44 +1,24 @@
 @font-face {
   font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-Bold.ttf") format("truetype");
+  src: url("./assets/orbitron/Orbitron-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-Medium.ttf") format("truetype");
+  src: url("./assets/orbitron/Orbitron-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-Regular.ttf") format("truetype");
+  src: url("./assets/orbitron/Orbitron-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Orbitron";
-  src: url("./assets/Orbitron/Orbitron-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
 body {
   min-height: 100vh;
 }
@@ -48,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: "Orbitron", system-ui, Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, system-ui, sans-serif;
 }
 :root {
   --black: #252b48;

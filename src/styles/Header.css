@@ -21,6 +21,7 @@
   font-weight: 600;
   color: var(--grey);
   text-align: center;
+  font-family: "Orbitron";
 }
 #root > header ul li {
   cursor: pointer;
