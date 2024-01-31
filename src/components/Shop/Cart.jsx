@@ -10,12 +10,13 @@ import { cartItems } from "../../Data";
 import { useContext, useState, useEffect } from "react";
 import "../../styles/Cart.css";
 import { Link } from "react-router-dom";
+import { Notif } from "../../Data";
 
 const getItemCountfromCartArr = (arr, name) => {
   for (let item of arr) if (item.name == name) return item.count;
 };
 
-function CartItem({ item }) {
+function CartItem({ item, setNotif }) {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 520);
 
   useEffect(() => {
@@ -52,6 +53,7 @@ function CartItem({ item }) {
   }
   function handleRemoveGame() {
     setGamesInCart(gamesInCart.filter((i) => i.name != item.name));
+    setNotif((n) => n - 1);
   }
 
   return (
@@ -93,6 +95,7 @@ function CartItem({ item }) {
 
 export default function Cart() {
   const { gamesInCart, setGamesInCart } = useContext(cartItems);
+  const { setNotif } = useContext(Notif);
 
   return (
     <section id="cart">
@@ -103,7 +106,14 @@ export default function Cart() {
             <span>Games</span>
           </Link>
         </button>
-        <button onClick={() => setGamesInCart([])}>Clear the Cart</button>
+        <button
+          onClick={() => {
+            setGamesInCart([]);
+            setNotif(0);
+          }}
+        >
+          Clear the Cart
+        </button>
       </header>
       {gamesInCart.length == 0 && (
         <p style={{ fontSize: "1.2rem", color: "var(--grey)" }}>
@@ -113,7 +123,7 @@ export default function Cart() {
       {gamesInCart && gamesInCart.length > 0 && (
         <>
           {gamesInCart.map((item) => (
-            <CartItem key={item.name} item={item} />
+            <CartItem key={item.name} item={item} setNotif={setNotif} />
           ))}
           <div className="checkout-area">
             <div>
